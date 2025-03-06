@@ -1,1 +1,31 @@
-<p>filter-panel works!</p>
+<mat-card>
+    <h3>Filter Shows</h3>
+  
+    <div class="filter-group">
+      <h4>Category</h4>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let category of categories" selectable (click)="toggleFilter('category', category)">
+          {{ category }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </div>
+  
+    <div class="filter-group">
+      <h4>Year</h4>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let year of years" selectable (click)="toggleFilter('year', year)">
+          {{ year }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </div>
+  
+    <div class="filter-group">
+      <h4>Rating</h4>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let rating of ratings" selectable (click)="toggleFilter('rating', rating)">
+          {{ rating }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </div>
+  </mat-card>
+  

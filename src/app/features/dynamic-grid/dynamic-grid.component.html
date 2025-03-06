@@ -1,1 +1,6 @@
-<p>dynamic-grid works!</p>
+<div class="grid">
+    <div *ngFor="let show of filteredShows; let i = index;" class="grid-item">
+      {{ show.title }} ({{ show.year }}) - {{ show.rating }}
+    </div>
+  </div>
+  
